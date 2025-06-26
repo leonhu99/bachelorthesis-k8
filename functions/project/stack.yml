@@ -1,0 +1,36 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://172.16.44.202:8081
+functions:
+  color-analysis:
+    lang: python3-http-debian
+    handler: ./color-analysis
+    image: docker.io/leonhu229/color-analysis:latest
+
+  edge-detect:
+    lang: python3-http-debian
+    handler: ./edge-detect
+    image: docker.io/leonhu229/edge-detect:latest
+
+  merge-results:
+    lang: python3-http-debian
+    handler: ./merge-results
+    image: docker.io/leonhu229/merge-results:latest
+
+  resize-image:
+    lang: python3-http-debian
+    handler: ./resize-image
+    image: docker.io/leonhu229/resize-image:latest
+
+  result-output:
+    lang: python3-http-debian
+    handler: ./result-output
+    image: docker.io/leonhu229/result-output:latest
+
+  transfer-result:
+    lang: python3-http-debian
+    handler: ./transfer-result
+    image: docker.io/leonhu229/transfer-result:latest
+
+    
