@@ -32,5 +32,3 @@ functions:
     lang: python3-http-debian
     handler: ./transfer-result
     image: docker.io/leonhu229/transfer-result:latest
-
-    
